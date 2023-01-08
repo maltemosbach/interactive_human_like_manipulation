@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Accelerating Interactive Human-like Manipulation Learning with GPU-based Simulation and High-quality Demonstrations</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Accelerating Interactive Human-like Manipulation Learning with GPU-based Simulation and High-quality Demonstrations">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top navbar-light" style="background-color: #f8f9fa;">
+        <a class="navbar-brand" href="#">Interactive Human-like Manipulation</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarToggle">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Abstract">Abstract</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Code">Source Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Videos">Videos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container" style="padding-top: 80px; font-size: 20px">
+        <div align="center">
+            <h2 class="text-center" align="center">
+                Accelerating Interactive Human-like Manipulation Learning with GPU-based Simulation and High-quality Demonstrations
+            </h2>
+            <h6>
+                <a href="https://maltemosbach.github.io/" target="_blank">Malte Mosbach</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="" target="_blank">Kara Moraw</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="https://www.ais.uni-bonn.de/behnke/" target="_blank">Sven Behnke</a><br>
+            </h6>
+            <small>Autonomous Intelligent Systems Group (AIS)</small> <br>
+            <small>University of Bonn</small>
+        </div>
+    </div><br>
+
+    <div class="container" style="padding-top: 10px; font-size: 20px">
+        <div align="center">
+            <div class="center">
+                <img class="img-responsive img-rounded" src="files/images/teaser.png" style="width:60%" alt="">
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <h4 id="Abstract" style="padding-top: 70px; margin-top: -80px; ">Abstract</h4>
+        <div style="text-align: justify">
+Dexterous manipulation with anthropomorphic robot hands remains a challenging problem in robotics because of the high-dimensional state and action spaces and complex contacts. Nevertheless, skillful closed-loop manipulation is required to enable humanoid robots to operate in unstructured real-world environments. Reinforcement learning (RL) has traditionally imposed enormous interaction data requirements for optimizing such complex control problems. We introduce a new framework that leverages recent advances in GPU-based simulation along with the strength of imitation learning in guiding policy search towards promising behaviors to make RL training feasible in these domains. To this end, we present an immersive virtual reality teleoperation interface designed for interactive human-like manipulation on contact rich tasks and a suite of manipulation environments inspired by tasks of daily living. Finally, we demonstrate the complementary strengths of massively parallel RL and imitation learning, yielding robust and natural behaviors.
+</div>
+    </div><br><br>
+
+
+    <div class="container">
+        <h4 id="Paper" style="padding-top: 70px; margin-top: -80px; ">Paper</h4>
+        <div style="text-align: justify">
+        <b>Accelerating Interactive Human-like Manipulation Learning with GPU-based Simulation and High-quality Demonstrations</b><br>
+        <a href="https://maltemosbach.github.io/" target="_blank">Malte Mosbach</a>, <a href="" target="_blank">Kara Moraw</a>, <a href="https://www.ais.uni-bonn.de/behnke/" target="_blank">Sven Behnke</a><br>
+<i>IEEE-RAS International Conference on Humanoids Robots (<b>Humanoids</b>)</i>, 2022 <br>  
+<a href="/paper/11624-/bibtex" class="btn btn-light btn-spacer">ArXiv</a>
+<a class="btn btn-light btn-spacer" href="/paper/2021/file/000c076c390a4c357313fca29e390ece-Paper.pdf">Code</a>
+<a href="bibtex" class="btn btn-light btn-spacer">BibTex</a>
+
+        </div>
+    </div><br><br>
+
+    <div class="container">
+    
+        <h4 id="Code" style="padding-top: 30px; margin-top: -40px;">Source code</h4>
+        Source code and human demonstration datasets are available at <a href="https://git.ais.uni-bonn.de/mosbach/gym-grasp">gym-grasp</a>.<br><br>
+        <h4 id="Videos" style="padding-top: 30px; margin-top: -40px;">Videos</h4>
+        <h5>VR Teleoperation Setup</h5>
+        The video below shows the operator, the HMD-view and a static view on the scene to illustrate the tracking of the operator's head and hand movements in the simulation. <br>
+        
+        <div style="text-align:center"> 
+            <video id="video1" width="900" controls>
+                <source src="files/videos/vr_teleoperation.mp4" type="video/mp4">
+            </video>
+        </div><br>
+        
+        <h5>Trained Policies</h5>
+        Videos show policies trained with behavior cloning (BC), Proximal Policy Optimization (PPO) with dense and sparse rewards, and a combination of BC and PPO (DAPG), which incorperates both imitation and reinforcement learning objectives.
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <table class="center">
+                        <tr style=font-size:15pt>
+                            <td style='text-align:center; vertical-align:middle'>BC</td>
+                            <td style='text-align:center; vertical-align:middle'>PPO-dense</td>
+                            <td style='text-align:center; vertical-align:middle'>PPO-sparse</td>
+                            <td style='text-align:center; vertical-align:middle'>DAPG-sparse</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDrawer_BC.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDrawer_PPO-dense.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDrawer_PPO-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDrawer_DAPG-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDoor_BC.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDoor_PPO-dense.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDoor_PPO-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/OpenDoor_DAPG-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/PourCup_BC.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/PourCup_PPO-dense.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/PourCup_PPO-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/PourCup_DAPG-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/LiftObject_BC.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/LiftObject_PPO-dense.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/LiftObject_PPO-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                            <td>
+                                <video width="253" class="center" controls>
+                                    <source src="files/videos/LiftObject_DAPG-sparse.mp4" type="video/mp4">
+                                </video>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                
+                </ul>
+            </div>
+        </div>
+    </div><br><br><br>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@inproceedings{mosbach2022,
+  author={Mosbach, Malte and Moraw, Kara and Behnke, Sven},
+  booktitle={2022 IEEE-RAS 21st International Conference on Humanoid Robots (Humanoids)}, 
+  title={Accelerating Interactive Human-like Manipulation Learning with GPU-based Simulation and High-quality Demonstrations}, 
+  year={2022},
+  pages={435-441}}
